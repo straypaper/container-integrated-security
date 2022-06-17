@@ -9,7 +9,7 @@ RUN apk -U upgrade
 RUN apk add \
     --no-cache \
     --repository https://dl-cdn.alpinelinux.org/alpine/v3.16/main \
-    bash krb5
+    bash krb5 icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
 
 RUN addgroup --system --gid 1000 apps
 RUN adduser --system --uid 1000 --ingroup apps --shell /bin/false \ 
