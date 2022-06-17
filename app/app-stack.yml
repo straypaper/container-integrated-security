@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  app:
+    image: app
+    hostname: app
+    environment:
+      - KRB5_CONFIG=/kerberos-sidecar/krb5.conf
+      - KRB5CCNAME=FILE:/kerberos-sidecar/krb5cc
+    volumes:
+      - sidecar-volume:/kerberos-sidecar:ro
+
+volumes:
+  sidecar-volume:
+    external: true
+    name: kerberos-sidecar

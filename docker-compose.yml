@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  app:
+    build: ./app
+  kerberos-sidecar:
+    build: ./kerberos-sidecar
+
+networks:
+  extnet:
+    external: true

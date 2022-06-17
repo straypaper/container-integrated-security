@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  kerberos-sidecar:
+    image: kerberos-sidecar
+    hostname: kerberos-sidecar
+    environment:
+      - SECRETS=/secrets
+      - KEYTAB=client.keytab
+      - PRINCIPAL=svc-app@straypaper.com
+      - KRB5_CONFIG=/kerberos-sidecar/krb5.conf
+      - KRB5CCNAME=FILE:/kerberos-sidecar/krb5cc
+      - REKINIT_PERIOD=3600
+      - TRACE_OUT=/dev/stdout
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      volumes:
+        - sidecar-volume:/kerberos-sidecar
+      secrets:
+        - source: client-keytab
+        - target: /secrets/client.keytab
+
+volumes:
+  sidecar-volume:
+    name: kerberos-sidecar
+
+secrets:
+  client-keytab:
+    external: true
+    name: client.keytab
