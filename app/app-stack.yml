@@ -7,6 +7,7 @@ services:
     environment:
       - KRB5_CONFIG=/kerberos-sidecar/krb5.conf
       - KRB5CCNAME=FILE:/kerberos-sidecar/krb5cc
+      - DB="Data Source=sp-sql-001.straypaper.com\SQL01,1433;Initial Catalog=master;Integrated Security=True;Connect Timeout=30"
     volumes:
       - sidecar-volume:/kerberos-sidecar:ro
 
