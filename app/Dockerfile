@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine
 
 ENV DB="Data Source=sp-sql-001.straypaper.com,1433;Initial Catalog=master;Integrated Security=True;Connect Timeout=30"
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
 RUN apk -U upgrade
 RUN apk add \
