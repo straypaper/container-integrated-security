@@ -23,7 +23,7 @@ The example reference the `STRAYPAPER.COM` domain and should be changed to match
 2. Create a keytable file for the __application service account__ which can be created using the `ktutil` utility and the commands below:
    ```
    $ ktutil
-   ktutil: add_entry -password -p svc-app@STRAYPAPER.COM -k 1 -e RC4-HMAC
+   ktutil: add_entry -password -p svc-app@STRAYPAPER.COM -k 0 -e RC4-HMAC
    ktutil: write_kt client.keytab
    ktutil: exit
    ```

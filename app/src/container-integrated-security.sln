@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-integrated-security", "container-integrated-security\docker-integrated-security.csproj", "{FF49868B-104C-4B74-95AF-08250EAF0799}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "container-integrated-security", "container-integrated-security\container-integrated-security.csproj", "{FF49868B-104C-4B74-95AF-08250EAF0799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

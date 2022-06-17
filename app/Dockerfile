@@ -18,4 +18,4 @@ COPY src/container-integrated-security/bin/Debug/net6.0/ /app
 
 WORKDIR /app
 
-ENTRYPOINT [ "dotnet", "container-integrated-security.dll" ]
+ENTRYPOINT [ "dotnet", "./container-integrated-security.dll" ]
