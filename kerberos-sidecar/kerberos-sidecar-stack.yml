@@ -7,7 +7,7 @@ services:
     environment:
       - SECRETS=/secrets
       - KEYTAB=client.keytab
-      - PRINCIPAL=svc-app@straypaper.com
+      - PRINCIPAL=svc-app@STRAYPAPER.COM
       - KRB5_CONFIG=/kerberos-sidecar/krb5.conf
       - KRB5CCNAME=FILE:/kerberos-sidecar/krb5cc
       - REKINIT_PERIOD=3600

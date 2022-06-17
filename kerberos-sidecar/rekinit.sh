@@ -6,7 +6,7 @@ while true; do
     echo "Refreshing Kerberos ticket at $(date)..."
     KRB5_TRACE=$TRACE_OUT kinit "$PRINCIPAL" -k -t "$SECRETS/$KEYTAB"
 
-    result = $?
+    result=$?
 
     if [[ $result -eq 0 ]]; then
         echo "Success. Sleeping for $REKINIT_PERIOD seconds..."

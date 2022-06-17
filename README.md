@@ -19,14 +19,26 @@ The example reference the `STRAYPAPER.COM` domain and should be changed to match
 3. A keytable file (.keytab) with the credentials for the `STRAYPAPER\svc-app` service account.
 
 ## Configuration
-1. Create a keytable file for the application service account which can be created using the `kutil` utility and the commands below:
+1. Run `kinit user@STRAYPAPER.COM` and provide the users's (principal's) password to authenticate to the domain and get an initial ticket-granting ticket.
+2. Create a keytable file for the __application service account__ which can be created using the `ktutil` utility and the commands below:
    ```
    $ ktutil
    ktutil: add_entry -password -p svc-app@STRAYPAPER.COM -k 1 -e RC4-HMAC
    ktutil: write_kt client.keytab
    ktutil: exit
    ```
-2. Create a secret in Docker Swarm using the keytable file using this command: 
+3. Run `klist` and verify the output is similar to:
+   ```
+   $ klist
+   Ticket cache: KEYRING:persistent:1971801104:krb_ccache_kngqT7D
+   Default principal: sduplooy@STRAYPAPER.COM
+ 
+   Valid starting     Expires            Service principal
+   06/17/22 16:47:12  06/18/22 02:47:12  krbtgt/STRAYPAPER.COM@STRAYPAPER.COM
+	       renew until 06/24/22 16:47:09
+   $
+   ```
+4. Create a secret in Docker Swarm using the keytable file using this command: 
    ```
    $ docker secret create client.keytab client.keytab
    ```

@@ -19,4 +19,4 @@ RUN chown -R 1000:1000 /kerberos-sidecar
 
 USER 1000
 
-ENTRYPOINT [ "bash", "/rekinit.sh" ]
+ENTRYPOINT [ "bash", "./rekinit.sh" ]
