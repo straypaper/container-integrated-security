@@ -16,11 +16,11 @@ services:
       replicas: 1
       restart_policy:
         condition: on-failure
-      volumes:
-        - sidecar-volume:/kerberos-sidecar
-      secrets:
-        - source: client-keytab
-        - target: /secrets/client.keytab
+    volumes:
+      - sidecar-volume:/kerberos-sidecar
+    secrets:
+      - source: client-keytab
+        target: /secrets/client.keytab
 
 volumes:
   sidecar-volume:

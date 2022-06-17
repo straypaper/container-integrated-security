@@ -34,7 +34,7 @@ The example reference the `STRAYPAPER.COM` domain and should be changed to match
 ## Deploy and run the stacks
 1. Compile the application using this command:
    ```
-   dotnet build ./app
+   dotnet build ./app/src/container-integrated-security
    ```
 2. Build the __kerberos-sidecar__ and __app__ containers using this command:
    ```
@@ -48,3 +48,7 @@ The example reference the `STRAYPAPER.COM` domain and should be changed to match
    ```
    $ docker stack deploy -c app/app-stack.yml app
    ```
+
+## References
+1. https://github.com/ahmetgurbuz1/kerberos-sidecar
+2. https://www.codeproject.com/Articles/1272546/Authenticate-NET-Core-Client-of-SQL-Server-with-In
