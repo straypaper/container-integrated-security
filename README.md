@@ -1,3 +1,10 @@
+![GitHub License](https://img.shields.io/github/license/straypaper/container-integrated-security)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/straypaper/container-integrated-security)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/straypaper/container-integrated-security)
+![GitHub Repo stars](https://img.shields.io/github/stars/straypaper/container-integrated-security)
+![GitHub watchers](https://img.shields.io/github/watchers/straypaper/container-integrated-security)
+![GitHub forks](https://img.shields.io/github/forks/straypaper/container-integrated-security)
+
 # Containers and Integrated Windows Authentication
 Example code to connect to Microsoft SQL Server from a Linux container using Integrated Windows Authentication.
 
